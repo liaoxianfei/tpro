@@ -1,9 +1,0 @@
-com.kingtype.workflow.domain.bo.FlowSpelBoToFlowSpelMapper
-com.kingtype.workflow.domain.bo.TestLeaveBoToTestLeaveMapper
-com.kingtype.workflow.domain.vo.FlowSpelVoToFlowSpelMapper
-com.kingtype.workflow.domain.FlowCategoryToFlowCategoryVoMapper
-com.kingtype.workflow.domain.bo.FlowCategoryBoToFlowCategoryMapper
-com.kingtype.workflow.domain.vo.FlowCategoryVoToFlowCategoryMapper
-com.kingtype.workflow.domain.FlowSpelToFlowSpelVoMapper
-com.kingtype.workflow.domain.vo.TestLeaveVoToTestLeaveMapper
-com.kingtype.workflow.domain.TestLeaveToTestLeaveVoMapper

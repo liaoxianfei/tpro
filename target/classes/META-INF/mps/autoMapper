@@ -1,6 +1,0 @@
-com.kingtype.workflow.domain.vo.FlowCategoryVo
-com.kingtype.workflow.domain.vo.TestLeaveVo
-com.kingtype.workflow.domain.vo.FlowSpelVo
-com.kingtype.workflow.domain.bo.FlowSpelBo
-com.kingtype.workflow.domain.bo.FlowCategoryBo
-com.kingtype.workflow.domain.bo.TestLeaveBo
