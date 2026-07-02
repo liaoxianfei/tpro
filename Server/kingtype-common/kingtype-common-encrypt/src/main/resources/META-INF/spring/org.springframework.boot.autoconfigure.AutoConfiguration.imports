@@ -1,0 +1,2 @@
+com.kingtype.common.encrypt.config.EncryptorAutoConfiguration
+com.kingtype.common.encrypt.config.ApiDecryptAutoConfiguration

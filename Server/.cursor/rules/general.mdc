@@ -1,0 +1,48 @@
+---
+description: 项目通用规则（含后端 KingType 规范，适用全项目）
+globs: **/*
+alwaysApply: true
+---
+
+# 项目通用规则（KingType / RuoYi-Cloud）
+
+遵循《阿里巴巴 Java 开发手册》，Java 17、禁止魔法值用常量/枚举，安全遵循 OWASP。通用命名/注释/日志见下文；后端包结构、技术栈、Controller/Service 约定以 kingtype-demo、kingtype-system、kingtype-resource、kingtype-workflow 为准。
+
+## 技术栈（后端）
+
+Java 17、Spring Boot 3.5.x | Nacos | Dubbo | Sa-Token | MyBatis-Plus | MapStruct-Plus/MapStruct | Seata | Redisson、Lock4j | warm-flow | Easy-ES | springdoc-openapi | RocketMQ | SnailJob | 多租户/幂等/加密/脱敏（kingtype-common-*）。
+
+## 包结构（后端模块）
+
+根包 **com.kingtype.{模块名}**。  
+`controller/`（可分子包 system、monitor）→ `service/` + `impl/` → `mapper/` → `domain/`（实体直接放 domain，无 DO 后缀；`bo/`、`vo/`、`convert/`）→ `dubbo/`（RemoteXxxServiceImpl）、`listener/`、`runner/`、`handler/`、`common/` 按需。启动类 RuoYiXxxApplication。
+
+## 代码与分层
+
+- 分层：Controller → Service → Mapper，禁止 Controller 注 Mapper。
+- 实体：继承 BaseEntity 或 TenantEntity，主键 @TableId；统一响应 PageQuery、TableDataInfo\<T\>、R\<T\>，toAjax()。
+- Lombok：@Data、@EqualsAndHashCode(callSuper=true)、@Slf4j、@RequiredArgsConstructor。
+
+## 命名（统一）
+
+- 模块/包：小写+中划线（kebab-case）。类/接口：大驼峰，业务语义+类型后缀。
+- **后端**：Controller 继承 BaseController；Service 接口 **I**XxxService，实现 XxxServiceImpl；Mapper XxxMapper；实体与表对应**无 DO 后缀**（如 SysUser、TestDemo）；入参 XxxBo，出参 XxxVo、XxxExportVo、XxxUploadVo；Dubbo 实现 RemoteXxxServiceImpl。
+- 方法/变量：小驼峰。常量：全大写下划线。枚举：XxxEnum、ENABLED。抽象类 Base/Abstract 开头，异常 Exception 结尾，测试类 XxxTest。
+- 禁止：缩写、拼音、中英混用、单字母变量、包名复数；VO/BO 放根包或 service 包；Service 层大段 if-else（抽方法或策略）。
+
+## Controller / Service 约定
+
+- Controller：@Validated、@RequiredArgsConstructor、@RestController、@RequestMapping；@SaCheckPermission("模块:资源:操作")、@Log(title, businessType)、@RepeatSubmit、@ApiEncrypt；校验分组 QueryGroup/AddGroup。
+- Service：接口返回 TableDataInfo/List/Boolean 等；实现类 @Service、@Slf4j、@Transactional 在方法上；用 Page、QueryWrapper、LambdaQueryWrapper。
+
+## 注释
+
+- 公共类/接口/方法用 Javadoc（@param、@return、@throws）。类含 @author、@since。Mapper 方法说明 SQL 意图。TODO/FIXME 写作者与日期。注释解释“为什么”而非“做什么”。
+
+## 日志
+
+- SLF4J + {} 占位符，不拼接字符串。ERROR/WARN/INFO/DEBUG 按级别使用；循环内不打 INFO 以上；敏感信息脱敏；异常带堆栈；审计用 @Log。
+
+## 其他
+
+- KISS、DRY、早返回；敏感操作审计；全局异常统一处理。前端：Vue3 + Composition API + TypeScript；测试 JUnit + Mockito，目标覆盖率 ≥80%。

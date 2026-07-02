@@ -1,0 +1,10 @@
+{
+    "http.proxy": "http://10.2.19.1:8118",
+    "http.proxySupport": "override",
+    "http.proxyStrictSSL": false,
+    "http.noProxy": [
+        "localhost",
+        "127.0.0.1"],
+    "cursor.general.disableHttp2": true,
+    "cursor.general.disableHttp1SSE": true
+}

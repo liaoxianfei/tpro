@@ -1,0 +1,6 @@
+com.kingtype.common.translation.config.TranslationConfig
+com.kingtype.common.translation.core.impl.DeptNameTranslationImpl
+com.kingtype.common.translation.core.impl.DictTypeTranslationImpl
+com.kingtype.common.translation.core.impl.OssUrlTranslationImpl
+com.kingtype.common.translation.core.impl.UserNameTranslationImpl
+com.kingtype.common.translation.core.impl.NicknameTranslationImpl

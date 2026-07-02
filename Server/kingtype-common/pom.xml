@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.kingtype</groupId>
+        <artifactId>OLT-Cloud-Plus</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <modules>
+        <module>kingtype-common-bom</module>
+        <module>kingtype-common-alibaba-bom</module>
+        <module>kingtype-common-log</module>
+        <module>kingtype-common-service-impl</module>
+        <module>kingtype-common-excel</module>
+        <module>kingtype-common-core</module>
+        <module>kingtype-common-redis</module>
+        <module>kingtype-common-doc</module>
+        <module>kingtype-common-security</module>
+        <module>kingtype-common-satoken</module>
+        <module>kingtype-common-web</module>
+        <module>kingtype-common-mybatis</module>
+        <module>kingtype-common-job</module>
+        <module>kingtype-common-dubbo</module>
+        <module>kingtype-common-seata</module>
+        <module>kingtype-common-loadbalancer</module>
+        <module>kingtype-common-oss</module>
+        <module>kingtype-common-ratelimiter</module>
+        <module>kingtype-common-idempotent</module>
+        <module>kingtype-common-mail</module>
+        <module>kingtype-common-sms</module>
+        <module>kingtype-common-logstash</module>
+        <module>kingtype-common-elasticsearch</module>
+        <module>kingtype-common-skylog</module>
+        <module>kingtype-common-prometheus</module>
+        <module>kingtype-common-translation</module>
+        <module>kingtype-common-sensitive</module>
+        <module>kingtype-common-json</module>
+        <module>kingtype-common-encrypt</module>
+        <module>kingtype-common-tenant</module>
+        <module>kingtype-common-websocket</module>
+        <module>kingtype-common-social</module>
+        <module>kingtype-common-nacos</module>
+        <module>kingtype-common-bus</module>
+        <module>kingtype-common-sse</module>
+    </modules>
+
+    <artifactId>kingtype-common</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        kingtype-common通用模块
+    </description>
+
+</project>

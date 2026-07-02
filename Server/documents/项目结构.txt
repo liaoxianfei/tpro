@@ -1,0 +1,86 @@
+OLT-Cloud-Plus
+├─ kingtype-api             // api模块
+│  └─ kingtype-api-bom                // api模块依赖管理
+│  └─ kingtype-api-resource           // 资源api模块
+│  └─ kingtype-api-system             // 系统api模块
+│  └─ kingtype-api-workflow           // 工作流api模块
+├─ kingtype-auth            // 认证服务 [9210]
+├─ kingtype-common          // 通用模块
+│  └─ kingtype-common-alibaba-bom     // alibaba 依赖管理
+│  └─ kingtype-common-bom             // common 依赖管理
+│  └─ kingtype-common-bus             // 消息总线模块
+│  └─ kingtype-common-core            // 核心功能模块
+│  └─ kingtype-common-dict            // 字典集成模块
+│  └─ kingtype-common-doc             // 文档集成模块
+│  └─ kingtype-common-dubbo           // dubbo集成模块
+│  └─ kingtype-common-elasticsearch   // ES集成模块
+│  └─ kingtype-common-encrypt         // 数据加解密模块
+│  └─ kingtype-common-excel           // excel集成模块
+│  └─ kingtype-common-idempotent      // 幂等功能模块
+│  └─ kingtype-common-job             // job定时任务集成模块
+│  └─ kingtype-common-json            // json集成模块
+│  └─ kingtype-common-loadbalancer    // 团队负载均衡集成模块
+│  └─ kingtype-common-log             // 日志集成模块
+│  └─ kingtype-common-logstash        // elk日志集成模块
+│  └─ kingtype-common-mail            // 邮件集成模块
+│  └─ kingtype-common-mybatis         // mybatis数据库相关集成模块
+│  └─ kingtype-common-oss             // oss相关集成模块
+│  └─ kingtype-common-prometheus      // prometheus监控
+│  └─ kingtype-common-redis           // redis集成模块
+│  └─ kingtype-common-satoken         // satoken集成模块
+│  └─ kingtype-common-seata           // seata分布式事务集成模块
+│  └─ kingtype-common-security        // 框架权限鉴权集成模块
+│  └─ kingtype-common-sensitive       // 脱敏功能模块
+│  └─ kingtype-common-sentinel        // sentinel集成模块
+│  └─ kingtype-common-skylog          // skywalking日志收集模块
+│  └─ kingtype-common-sms             // 短信集成模块
+│  └─ kingtype-common-social          // 社交三方功能模块
+│  └─ kingtype-common-sse             // sse流推送模块
+│  └─ kingtype-common-tenant          // 租户功能模块
+│  └─ kingtype-common-translation     // 通用翻译功能
+│  └─ kingtype-common-web             // web服务集成模块
+│  └─ kingtype-common-websocket       // websocket服务集成模块
+├─ kingtype-example        // 例子模块
+│  └─ kingtype-demo        // 演示模块 [9401]
+│  └─ kingtype-test-mq     // mq演示模块 [9402]
+├─ kingtype-gateway        // 网关模块 [8080]
+├─ kingtype-modules        // 功能模块
+│  └─ kingtype-gen                    // 代码生成模块 [9202]
+│  └─ kingtype-job                    // 任务调度模块 [9203,9901]
+│  └─ kingtype-resource               // 资源模块 [9204]
+│  └─ kingtype-system                 // 系统模块 [9201]
+│  └─ kingtype-workflow               // 工作流模块 [9205]
+├─ kingtype-visual         // 可视化模块
+│  └─ kingtype-monitor                // 服务监控模块 [9100]
+│  └─ kingtype-nacos                  // nacos服务模块 [8848,9848,9849]
+│  └─ kingtype-seata-server           // seata服务模块 [7091,8091]
+│  └─ kingtype-sentinel-dashboard     // sentinel控制台模块 [8718]
+│  └─ kingtype-snailjob-server        // 任务调度控制台模块 [8800,17888]
+├─ plus-ui              // 前端框架 [80]
+├─ config/nacos         // nacos配置文件(需复制到nacos配置中心使用)
+│  └─ sentinel-kingtype-gateway.json  // sentinel对接gateway限流配置文件
+│  └─ seata-server.properties      // seata服务配置文件
+│  └─ application-common.yml              // 所有应用主共享配置文件
+│  └─ datasource.yml               // 所有应用共享数据源配置文件
+│  └─ kingtype-auth.yml               // auth 模块配置文件
+│  └─ kingtype-gateway.yml            // gateway 模块配置文件
+│  └─ kingtype-gen.yml                // gen 模块配置文件
+│  └─ kingtype-job.yml                // job 模块配置文件
+│  └─ kingtype-monitor.yml            // monitor 模块配置文件
+│  └─ kingtype-resource.yml           // resource 模块配置文件
+│  └─ kingtype-sentinel-dashboard.yml // sentinel 控制台 模块配置文件
+│  └─ kingtype-snailjob-server.yml    // snailjob 控制台 模块配置文件
+│  └─ kingtype-system.yml             // systen 模块配置文件
+│  └─ kingtype-workflow.yml           // workflow 模块配置文件
+├─ config/grafana       // grafana配置文件(需复制到grafana使用)
+│  └─ Nacos.json                        // Nacos监控页面
+│  └─ SLS JVM监控大盘.json               // JVM监控页面
+│  └─ Spring Boot 2.1 Statistics.json   // SpringBoot监控页面
+├─ documents            // 文档
+├─ sql                  // sql脚本
+├─ docker               // docker 配置脚本
+├─ .run                 // 执行脚本文件
+├─ .editorconfig        // 编辑器编码格式配置
+├─ LICENSE              // 开源协议
+├─ pom.xml              // 公共依赖
+├─ README.md            // 框架说明文件

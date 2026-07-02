@@ -1,0 +1,1 @@
+dubboDataPermissionFilter=com.kingtype.common.mybatis.filter.DubboDataPermissionFilter

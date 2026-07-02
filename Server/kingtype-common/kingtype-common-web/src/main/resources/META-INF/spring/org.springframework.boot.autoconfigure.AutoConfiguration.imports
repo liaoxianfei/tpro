@@ -1,0 +1,4 @@
+com.kingtype.common.web.config.FilterConfig
+com.kingtype.common.web.config.I18nConfig
+com.kingtype.common.web.config.UndertowConfig
+com.kingtype.common.web.config.ResourcesConfig

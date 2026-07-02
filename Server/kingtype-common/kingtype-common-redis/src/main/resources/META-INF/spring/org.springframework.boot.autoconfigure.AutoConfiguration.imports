@@ -1,0 +1,2 @@
+com.kingtype.common.redis.config.RedisConfiguration
+com.kingtype.common.redis.config.CacheConfiguration
